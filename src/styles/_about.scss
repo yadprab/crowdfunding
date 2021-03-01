@@ -1,0 +1,280 @@
+ .about--section {
+     padding: 1em;
+
+     h3,
+     p {
+         text-align: left;
+     }
+
+     h3 {
+         font-weight: 700;
+         font-size: 1.25rem;
+     }
+
+     .pledge {
+         font-weight: 500;
+         color: var(--ModerateCyan);
+     }
+
+ }
+
+ .price--cards {
+
+
+     .price--comp {
+         margin: 1em 0;
+         padding: 1em;
+         border-radius: 4px;
+
+         h5 {
+             font-weight: 700;
+
+             span {
+                 font-weight: 400;
+             }
+         }
+     }
+
+     .price--compArc {
+         margin: 1em 0;
+         padding: 1em;
+         border-radius: 4px;
+
+         h5 {
+             font-weight: 700;
+             margin: 1em 0;
+
+             span {
+                 font-weight: 400;
+             }
+         }
+
+
+
+         h3 {
+             font-size: 1rem;
+             font-weight: 700;
+             margin: 0;
+         }
+
+         .pledge {
+             font-weight: 500;
+             color: var(--ModerateCyan);
+         }
+
+     }
+
+
+ }
+
+ .out--of--stock {
+     opacity: 0.5;
+ }
+
+ .floating--section {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: rgba($color: #000000, $alpha: 0.5);
+     display: grid;
+     place-items: center;
+     padding: 1em;
+     z-index: 14000;
+
+     overflow: auto;
+
+     .confetti {
+         z-index: -1;
+
+     }
+
+     .price--cards {
+         padding: 1em;
+     }
+
+
+
+     .price--comp {
+         background-color: var(--white);
+         padding: 1em;
+         max-width: 780px;
+         border-radius: 4px;
+         position: relative;
+
+         .close {
+             position: absolute;
+             right: 15px;
+             top: 15px;
+             cursor: pointer;
+         }
+
+
+         .box {
+             align-items: center;
+             display: grid;
+             margin: 1em 0;
+             grid-template-columns: 50px 1fr;
+
+             .pledge {
+                 display: block;
+             }
+
+
+         }
+     }
+ }
+
+ .label {
+     position: relative;
+
+     input {
+
+         opacity: 0;
+     }
+
+
+
+
+ }
+
+ input[type=number] {
+    
+     font-size: 1rem;
+     font-weight: 700;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        
+     &:focus{
+           box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+     }
+ }
+
+ .check--mark {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     width: 25px;
+     height: 25px;
+     border: 2px solid rgba($color: #000000, $alpha: 0.5);
+     border-radius: 50%;
+     cursor: pointer;
+
+
+     &::after {
+         position: absolute;
+         content: '';
+         top: 2px;
+         right: 2px;
+         bottom: 0;
+         left: 2px;
+         width: 17px;
+         height: 17px;
+         background-color: var(--ModerateCyan);
+         border-radius: 50%;
+         display: none;
+     }
+ }
+
+ .price--compArc,
+ .price--comp {
+     border: 1px solid rgb(183, 183, 183);
+
+
+ }
+
+ .check {
+
+     border-color: #b43c44;
+
+     &::after {
+         display: block;
+     }
+ }
+
+ .bod {
+     border: 2px solid var(--DarkCyan);
+ }
+
+ .modal {
+
+     background-color: #fff;
+     max-width: 320px;
+     @include flex-2;
+     padding: 1em;
+     border-radius: 4px;
+
+     p {
+         text-align: center;
+     }
+
+     button {
+         margin: 1.5em 0;
+     }
+
+ }
+
+ .pledge--section {
+     display: grid;
+     grid-template-columns: 1fr;
+     place-content: center;
+     justify-items: center;
+     width: 100%;
+     border-top: 1px solid rgb(183, 183, 183);
+
+     h4 {
+         font-size: 1rem;
+         font-weight: 400;
+         color: var(--Darkgray);
+     }
+
+
+     input {
+         width: 124px;
+         height: 40px;
+         appearance: none;
+         border: 1px solid rgba($color: #000000, $alpha: 0.5);
+         border-radius: 20px;
+         padding: 1em;
+     }
+
+     .button--inp--section {
+         display: grid;
+         gap: 1rem;
+         place-content: center;
+     }
+
+ }
+
+ .pledge--dis {
+     h4 {
+         display: none;
+     }
+
+     input {
+         display: none;
+     }
+
+     button {
+         margin-top: 1em;
+     }
+
+ }
+
+ .success {
+     overflow: unset;
+ }
+ /* Chrome, Safari, Edge, Opera */
+ input::-webkit-outer-spin-button,
+ input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+ }
+
+ /* Firefox */
+ input[type=number] {
+     -moz-appearance: textfield;
+ }

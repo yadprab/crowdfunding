@@ -1,0 +1,35 @@
+.secondary--button{
+   
+    @include button;
+    padding: 0.75em 2em;
+    min-height: 3rem;
+    min-width: 96px;
+    font-weight: 500;
+    border-radius: 30px;
+    background-color: var(--ModerateCyan);
+    color: var(--white);
+    font-family: 'Commissioner',
+    sans-serif;
+    line-height: 1.5;
+   &:hover{
+       background-color: var(--DarkCyan);
+   }
+
+}
+.disable{
+    background-color: var(--Darkgray);
+    opacity: 0.5;
+
+     &:hover {
+           background-color: var(--Darkgray);
+     }
+}
+
+#icon--button,.bookmark{
+    cursor: pointer;
+    @include svg-button;
+    background-color: unset;
+}
+.bookmark--button{
+    display: none;
+}
